@@ -1,0 +1,94 @@
+/*
+=============== 
+Navbar
+===============
+*/
+
+.links a {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  transition: all 0.3s linear;
+}
+.links a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+.links {
+  height: 0;
+  overflow: hidden;
+  margin: 1rem 0 0;
+  transition: all 400ms linear;
+}
+.links li {
+  margin: 0 0 1rem;
+}
+.show-links {
+  height: 12.5rem;
+}
+.h1-header {
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 770px) {
+  #hero {
+    scroll-margin-top: 270px;
+  }
+  #rockets {
+    scroll-margin-top: 270px;
+  }
+  #testimonials {
+    scroll-margin-top: 270px;
+  }
+  #contact {
+    scroll-margin-top: 270px;
+  }
+  .section1 {
+    display: flex;
+    flex-flow: row-reverse;
+    vertical-align: top;
+  }
+  .h1-header {
+    align-self: flex-start;
+  }
+  .button-one .line {
+    transition: y 250ms ease-in 250ms, rotate 250ms ease-in, opacity 0ms 250ms;
+    transform-origin: center;
+  }
+
+  .button-one[aria-expanded="true"] .line {
+    transition: y 250ms ease-in, rotate 250ms ease-in 250ms, opacity 0ms 250ms;
+  }
+
+  .button-one[aria-expanded="true"] :is(.top, .bottom) {
+    y: 45;
+  }
+
+  .button-one[aria-expanded="true"] .top {
+    rotate: 45deg;
+  }
+
+  .button-one[aria-expanded="true"] .middle {
+    opacity: 0;
+  }
+
+  .button-one[aria-expanded="true"] .bottom {
+    rotate: -45deg;
+  }
+}
+
+@media screen and (min-width: 770px) {
+  .h1-header {
+    display: block;
+  }
+  .links {
+    height: auto;
+    display: flex;
+    margin: 1rem 0 0;
+  }
+  .links a {
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+  .links a:hover {
+    padding: 0;
+    background: transparent;
+  }
+}
